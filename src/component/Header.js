@@ -8,7 +8,7 @@ export default function Header() {
       <h1>Fruits-fantasy</h1>
       <div id="Fruits Search">
         <input type='text' placeholder="Search Fruits" />
-        <button type="submit"><img /></button>
+        <button type="submit"><img alt="search"/></button>
       </div>
       <div id='HeaderbuttonsRow'>
         <Link to="/Login">Log In</Link>
