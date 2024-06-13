@@ -1,6 +1,12 @@
 import { useState } from "react";
+import { useAuth } from "../context/AuthContext";
 
 export default function Login() {
+
+    // getting data from AuthContext
+
+    const { loginF } = useAuth();
+
 
     const [formData, setFormData] = useState({
         username: "",
@@ -15,11 +21,16 @@ export default function Login() {
         ))
     }
 
+    const ACCOUNT = { username: 'asd', password: 'asd' };
+    console.log(ACCOUNT.username + '+' + ACCOUNT.password);
+
+
     function handleSubmit() {
         alert(`Login 
             ${formData.username},
             ${formData.password}
             `);
+        loginF(ACCOUNT);
     }
 
     return (
