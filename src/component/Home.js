@@ -1,9 +1,9 @@
 import Header from "./Header";
 
-export default function Home(){
+export default function Home() {
 
-    return(<>
-        <Header/>
+    return (<>
+        <Header />
         <h1>Home</h1>
     </>
     );
