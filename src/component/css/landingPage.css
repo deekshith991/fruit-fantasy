@@ -1,0 +1,18 @@
+.LandingPage {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(236, 236, 145);
+    min-height: 90vh;
+    padding-left: 3%;
+}
+
+#mainWord {
+    font-size: 60px;
+    background: linear-gradient(to right, red, blue);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#slogan {
+    padding-left: 5%;
+}
