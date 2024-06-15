@@ -5,6 +5,7 @@ import Login from "./component/Login";
 import Gallery from "./component/Gallery";
 // import Logout from "./component/Logout";
 import Home from "./component/Home";
+import Logout from "./component/Logout";
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
           <Route path="/login" element={< Login />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/Gallery" element={<Gallery />} />
-          {/* <Route path="/Logout" element={<Logout />} /> */}
+          <Route path="/Logout" element={<Logout />} />
           <Route path="/*" element={<Home />} />
         </Routes>
       </div>

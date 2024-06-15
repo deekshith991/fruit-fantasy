@@ -1,13 +1,24 @@
 import Footer from "./Footer"
 import Header from "./Header";
+import { useAuth } from "../context/AuthContext";
 
-export default function Profile (){
+export default function Profile() {
 
-    return(
+    const { user } = useAuth() || {};
+
+    return (
         <>
-        <Header />
-        <h1>profile</h1>
-        <Footer />
+            <Header />
+            <h1>profile</h1>
+            {user ? (
+                <div>
+                    <p>Name: {user.name}</p>
+                    <p>Email: {user.email}</p>
+                </div>
+            ) : (
+                <p>No user is logged in.</p>
+            )}
+            <Footer />
         </>
     );
 }

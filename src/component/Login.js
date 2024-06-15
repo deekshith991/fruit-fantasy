@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
 
     // getting data from AuthContext
 
-    const { loginF } = useAuth();
+    const { user, loginF, logoutF } = useAuth() || {};
+    const navigate = useNavigate();
 
 
     const [formData, setFormData] = useState({
@@ -22,21 +24,21 @@ export default function Login() {
     }
 
     const ACCOUNT = { username: 'asd', password: 'asd' };
-    console.log(ACCOUNT.username + '+' + ACCOUNT.password);
+    // console.log("db pass" + ACCOUNT.username + '+' + ACCOUNT.password "& + ");
 
 
-    function handleSubmit() {
-        alert(`Login 
-            ${formData.username},
-            ${formData.password}
-            `);
-        loginF(ACCOUNT);
+    function handleLogin() {
+        if (formData.username === ACCOUNT.username && formData.password === ACCOUNT.password) {
+            loginF(user);
+            navigate("/gallery")
+        } else {
+            logoutF();
+        }
     }
-
     return (
         <>
             <div id="LoginForm">
-                <form onSubmit={handleSubmit}>
+                <form>
                     <div id="LoginInput">
                         <label>Username: </label>
                         <input type='email/text' name='username' value={formData.username} onChange={onChangeHandle} placeholder="Username" />
@@ -47,7 +49,7 @@ export default function Login() {
                         <input type="password" name='password' value={formData.password} onChange={onChangeHandle} placeholder="Password" />
                     </div>
                     <div id='LoginButtons'>
-                        <button type="submit" >Log In</button>
+                        <button type="submit" onClick={handleLogin} >Log In</button>
                         <button type="reset" >cancel</button>
                     </div>
                 </form>

@@ -5,7 +5,7 @@ import Header from "./Header";
 
 export default function Gallery() {
 
-    return(
+    return (
         <div>
             <Header />
             <FruitsView />

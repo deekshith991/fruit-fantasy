@@ -1,5 +1,8 @@
+import { useAuth } from "../context/AuthContext";
 
-export default function Logout(){
+export default function Logout() {
+    const { logoutF } = useAuth() || {};
 
-    return(<h1>Logout</h1>);
+    return (<button onClick={logoutF} > Logout</button>);
+
 }
