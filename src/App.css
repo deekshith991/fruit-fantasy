@@ -1,4 +1,4 @@
-body{
+body {
   min-height: 100vh;
 }
 
@@ -8,20 +8,22 @@ div {
 
 }
 
-header , footer{
+header,
+footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: gold;
   width: 100%;
 }
 
-#HeaderbuttonsRow{
+#HeaderbuttonsRow {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-img{
+#fruitsImage {
   height: 150px;
   width: 150px;
   border-top-left-radius: 25px;
@@ -35,7 +37,7 @@ img{
   padding-bottom: 5%;
 }
 
-#fruitCard{
+#fruitCard {
 
   width: 150px;
   height: 250px;
@@ -50,11 +52,11 @@ img{
 
 }
 
-#info{
+#info {
   background-color: wheat;
 }
 
-#LoginForm{
+#LoginForm {
   background-color: gold;
 
   max-width: 300px;
@@ -66,12 +68,17 @@ img{
   align-items: center;
 }
 
-#LoginInput{
+#LoginInput {
   margin: 10px;
   margin-top: 0px;
 }
 
-a{
+a {
   color: red;
   padding: 5px;
+}
+
+#searchImageLogo {
+  width: 10px;
+  height: 10px;
 }

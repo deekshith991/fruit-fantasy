@@ -6,9 +6,10 @@ export default function Header() {
     <header>
 
       <h1>Fruits-fantasy</h1>
-      <div id="Fruits Search">
+      <div id="FruitsSearch">
         <input type='text' placeholder="Search Fruits" />
-        <button type="submit"><img alt="search  "/></button>
+        <button type="submit">
+          <img id='searchImageLogo  ' alt="search" src="/assets/search_logo.png" height={'10px'} width={'10px'} /></button>
       </div>
       <div id='HeaderbuttonsRow'>
         <Link to="/Login">Log In</Link>
