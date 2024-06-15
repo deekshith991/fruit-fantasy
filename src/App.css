@@ -79,6 +79,26 @@ a {
 }
 
 #searchImageLogo {
-  width: 10px;
-  height: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+#FruitsSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#SearchInput {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  height: 25px;
+}
+
+#SearchFruit {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  margin: 0px;
+  height: 31px;
+  width: 50px;
 }
